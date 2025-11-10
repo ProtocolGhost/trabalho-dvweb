@@ -1,0 +1,181 @@
+:root{
+  --bg: #f6f8fb;
+  --card: #ffffff;
+  --primary: #2563eb;
+  --text: #102a43;
+  --muted: #6b7280;
+  --radius: 8px;
+  --gap: 16px;
+}
+
+*{box-sizing:border-box}
+html,body,#root{height:100%}
+body{
+  margin:0;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: linear-gradient(180deg,#f8fbff, var(--bg));
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  padding:32px;
+}
+
+.container{
+  max-width:980px;
+  margin:0 auto;
+  display:grid;
+  grid-template-columns: 1fr 360px;
+  gap:var(--gap);
+  align-items:start;
+}
+
+/* header */
+.header{
+  grid-column: 1 / -1;
+  margin-bottom:8px;
+}
+.header h1{
+  margin:0 0 6px 0;
+  font-size:1.5rem;
+  letter-spacing:-0.2px;
+}
+.header p{margin:0;color:var(--muted);font-size:0.95rem}
+
+/* card */
+.card{
+  background:var(--card);
+  border-radius:var(--radius);
+  padding:18px;
+  box-shadow: 0 6px 18px rgba(16,42,67,0.06);
+  border: 1px solid rgba(16,42,67,0.04);
+}
+
+/* form */
+.form-cadastro{
+  display:flex;
+  flex-direction:column; /* garante empilhamento */
+  gap:12px;
+}
+
+/* cada campo com label em cima e input embaixo */
+.form-cadastro .field{
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+}
+.form-cadastro label{
+  font-size:0.9rem;
+  color:var(--muted);
+}
+.form-cadastro input{
+  display:block;
+  width:100%;
+  padding:10px 12px;
+  border:1px solid rgba(16,42,67,0.08);
+  border-radius:6px;
+  font-size:0.95rem;
+  background:transparent;
+}
+
+.form-cadastro button{
+  margin-top:6px;
+  padding:10px 12px;
+  background:#000;
+  color:#fff;
+  border:none;
+  border-radius:6px;
+  cursor:pointer;
+  font-weight:600;
+}
+.form-cadastro button:hover{filter:brightness(0.9)}
+
+.btn-primary{
+  background: #000 !important;
+  color: #fff !important;
+  border: none !important;
+  box-shadow: none;
+}
+
+.btn-primary {
+  background: #000 !important;
+  color: #fff !important;
+  border: none !important;
+  padding: 10px 12px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-secondary {
+  background: #f3f4f6;
+  color: #374151;
+  border: 1px solid rgba(16,42,67,0.06);
+  padding: 10px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.btn-secondary:hover {
+  background: #e5e7eb;
+}
+
+.btn-danger {
+  background: #ef4444;
+  color: #fff;
+  border: none;
+  padding: 10px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* lista */
+.lista-registros{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+.lista-registros ul{
+  list-style:none;
+  padding:0;
+  margin:0;
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+}
+.lista-registros li{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:10px 12px;
+  background:linear-gradient(180deg, rgba(246,248,251,0.6), rgba(255,255,255,0.6));
+  border:1px solid rgba(16,42,67,0.04);
+  border-radius:6px;
+  gap:12px;
+}
+.reg-info{display:flex;flex-direction:column}
+.reg-info .nome{font-weight:600}
+.reg-info .email{font-size:0.9rem;color:var(--muted)}
+
+/* empty state */
+.empty{
+  color:var(--muted); text-align:center; padding:18px 8px;
+}
+
+/* responsivo */
+@media (max-width:880px){
+  .container{ grid-template-columns: 1fr; padding:0 8px }
+}
+
+.search-input{
+  padding:8px 10px;
+  border:1px solid rgba(16,42,67,0.08);
+  border-radius:6px;
+  min-width:220px;
+  font-size:0.95rem;
+  background:transparent;
+  color:var(--text);
+}
+.search-input:focus{
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(37,99,235,0.08);
+  border-color: rgba(37,99,235,0.8);
+}

@@ -1,0 +1,33 @@
+{
+  "usuarios": [
+    {
+      "id": "b2b1dc42-ccb3-4174-a9e5-979ca6756d31",
+      "nome": "Zé do Dev",
+      "senha": "zedev123"
+    },
+    {
+      "id": "ca7b",
+      "nome": "Pato",
+      "senha": "pato123",
+      "wins": 0,
+      "losses": 2
+    }
+  ],
+  "games": [
+    {
+      "id": "6ee3",
+      "hostId": "ca7b",
+      "status": "waiting"
+    },
+    {
+      "id": "c919",
+      "hostId": "ca7b",
+      "status": "waiting"
+    },
+    {
+      "id": "da26",
+      "hostId": "ca7b",
+      "status": "waiting"
+    }
+  ]
+}
