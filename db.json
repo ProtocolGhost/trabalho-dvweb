@@ -11,6 +11,20 @@
       "senha": "pato123",
       "wins": 0,
       "losses": 2
+    },
+    {
+      "id": "a5be",
+      "nome": "Laranja",
+      "senha": "qwerty",
+      "wins": 0,
+      "losses": 0
+    },
+    {
+      "id": "722c",
+      "nome": "CNORATATENTANDO",
+      "senha": "CNORA1234",
+      "wins": 0,
+      "losses": 0
     }
   ],
   "games": [
@@ -27,6 +41,61 @@
     {
       "id": "da26",
       "hostId": "ca7b",
+      "status": "waiting"
+    },
+    {
+      "id": "fab6",
+      "hostId": "722c",
+      "status": "waiting"
+    },
+    {
+      "id": "2418",
+      "hostId": "722c",
+      "status": "waiting"
+    },
+    {
+      "id": "b663",
+      "hostId": "722c",
+      "status": "waiting"
+    },
+    {
+      "id": "fe24",
+      "hostId": "a5be",
+      "status": "waiting"
+    },
+    {
+      "id": "30b7",
+      "hostId": "a5be",
+      "status": "waiting"
+    },
+    {
+      "id": "6b6a",
+      "hostId": "a5be",
+      "status": "waiting"
+    },
+    {
+      "id": "1abb",
+      "hostId": "722c",
+      "status": "waiting"
+    },
+    {
+      "id": "9d18",
+      "hostId": "722c",
+      "status": "waiting"
+    },
+    {
+      "id": "4a02",
+      "hostId": "a5be",
+      "status": "waiting"
+    },
+    {
+      "id": "9af5",
+      "hostId": "a5be",
+      "status": "waiting"
+    },
+    {
+      "id": "f90b",
+      "hostId": "a5be",
       "status": "waiting"
     }
   ]

@@ -44,18 +44,16 @@ export default function LocalGamePage() {
           }
           return next;
         });
-      }, 200);
+      }, 300);
     }
     return () => clearInterval(aiInterval.current);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [playing]);
 
   useEffect(() => {
-    if (playerHP <= 0 && playing) {
-      endGame("loss");
-    }
-    if (aiHP <= 0 && playing) {
-      endGame("win");
-    }
+    if (playerHP <= 0 && playing) endGame("loss");
+    if (aiHP <= 0 && playing) endGame("win");
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [playerHP, aiHP]);
 
   function endGame(result) {
@@ -68,6 +66,7 @@ export default function LocalGamePage() {
     } else {
       toast.info("Você perdeu (jogo local). Resultado NÃO conta no seu recorde.");
     }
+    // NÃO atualizar wins/losses no back-end para modo local
   }
 
   function playerAttack() {
@@ -100,9 +99,12 @@ export default function LocalGamePage() {
 
             <div style={{ display: "flex", gap: 8, marginTop: 12 }}>
               <button className="btn-primary" onClick={playerAttack} disabled={!playing}>Atacar</button>
-               {playing ? null : (
-                  <button className="btn-secondary" onClick={resetGame}>Reiniciar</button>
+
+              {/* Reiniciar aparece somente após a partida terminar */}
+              {!playing && (
+                <button className="btn-secondary" onClick={resetGame}>Reiniciar</button>
               )}
+
               <button className="btn-secondary" onClick={() => navigate("/profile")}>Voltar ao perfil</button>
             </div>
 
