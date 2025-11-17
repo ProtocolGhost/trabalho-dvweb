@@ -159,13 +159,3 @@ npm run dev
 - O jogo local (vs IA) conta no ranking? — Não: o servidor atualiza `wins`/`losses` somente quando `hostId` e `opponentId` estão definidos (jogo entre 2 players online).
 
 ---
-
-Se quiser, eu posso também:
-- Adicionar este ficheiro ao `README.md` (ou linká-lo);
-- Gerar exemplos práticos de `curl` ou Postman collections;
-- Gerar um script `npm run dev:all` que inicia frontend e json-server / servidor automaticamente.
-
-
----
-
-© Projeto trabalho-dvweb — documentação gerada automaticamente para referência de desenvolvimento local.
